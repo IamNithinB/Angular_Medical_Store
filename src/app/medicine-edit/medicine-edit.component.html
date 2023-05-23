@@ -1,0 +1,21 @@
+<div class="container-fluid border-top border-light">
+    <div class="editForm col-lg-4 col-md-6 mx-auto mt-5 shadow p-2">
+        <form>
+            <div class="mb-3">
+                <label for="Mname" class="form-label">Medicine Name</label>
+                <input type="text" id="Mname" name="Mname" class="form-control" [(ngModel)]="medicine.name">
+            </div>
+            <div class="mb-3">
+                <label for="Cname" class="form-label">Company Name</label>
+                <input type="text" id="Cname" name="Cname" class="form-control" [(ngModel)]="medicine.company">
+            </div>
+            <div class="mb-3">
+                <label for="expDate" class="form-label">Expairy_Date</label>
+                <input type="date" id="expDate" name="expDate" class="form-control" [(ngModel)]="medicine.expiry_date">
+            </div>
+            <div class="text-center">
+                <Button class="btn btn-primary" type="submit" (click)="medicineEdit()">Update</Button>
+            </div>
+        </form>
+    </div>
+</div>

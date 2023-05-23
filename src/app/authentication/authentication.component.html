@@ -1,0 +1,54 @@
+<div class="container-fluid d-flex justify-content-center align-items-center bg-light">
+    <div class="formBox  col-md-4 mt-5">
+        <div class="loginBox text-center shadow p-3" *ngIf="isLoginMode;else Signup">
+            <h3>Login</h3>
+            <form #authForm="ngForm" (ngSubmit)="login(authForm.value)" name="login">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" ngModel>
+                </div>
+                <div class="mb-3">
+                  <label for="pw1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" ngModel>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <button class="btn btn-success mt-3" (click)="onSwitchMode()">Create an account</button>
+            </form>
+            <span class="text-danger">{{errorMsg}}</span>
+        </div>
+        <ng-template #Signup>
+            <div class="signupBox text-center shadow p-3">
+                <h3>SignUp</h3>
+            <form #authForm="ngForm" (ngSubmit)="signup(authForm.value)" name="signup">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" ngModel>
+                </div>
+                <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" ngModel>
+                </div>
+                <div class="mb-3">
+                <label for="pw1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="pw2" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" ngModel>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <button class="btn btn-success mt-3" (click)="onSwitchMode()">Back</button>
+                
+            </form>
+            </div>
+        </ng-template>
+        
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,12 @@
+<div class="container-fluid border-top border-light">
+    <div class="col-md-8 col-lg-5 mx-auto mt-5">
+        <div class="card">
+            <div class="card-body shadow p-4 text-center">
+              <p><strong>Medicine Name</strong> : {{viewArray.name}}</p>
+              <p><strong>Company Name</strong> : {{viewArray.company}}</p>
+              <p><strong>Expiry Date</strong> : {{viewArray.expiry_date}}</p>
+              <button class="btn btn-primary text-center" (click)="editPage(viewArray.id)">Edit</button>
+            </div>
+          </div>
+    </div>
+</div>

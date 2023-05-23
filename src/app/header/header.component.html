@@ -1,0 +1,13 @@
+<div class="conatiner-fluid">
+    <nav class="navbar navbar-light bg-info col-sm-12">
+        <div class="">
+            <a class="navbar-brand" href="#">
+                <h2>ABC PHARMACY</h2>
+            </a>
+        </div>
+       <div class="">
+        <div *ngIf="isLoggedIn==false" class="Button btn btn-success m-3">Login/Signup</div>
+        <div *ngIf="isLoggedIn" class="Button btn btn-success m-3" (click)="logout()">Logout</div>
+       </div>
+      </nav>
+</div>
